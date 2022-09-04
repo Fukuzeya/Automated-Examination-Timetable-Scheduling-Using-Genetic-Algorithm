@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>MSUAS | EXAM DEPT</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="MSUAS EXAMINATION SCHEDULING SYSTEM">
+    <meta name="author" content="msuas">        
+    <!-- FontAwesome JS-->
+    <script defer src="{% static 'assets/plugins/fontawesome/js/all.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'bootstrap-5.0.2-dist/css/bootstrap.min.css' %}">
+<!-- <link rel="stylesheet" type="text/css" href="{% static 'DataTables/datatables.min.css' %}"/> -->
+
+<!-- <script type="text/javascript" src="{% static 'DataTables/datatables.min.js' %}"></script> -->
+    <!-- App CSS -->  
+    <link id="theme-style" rel="stylesheet" href="{% static 'assets/css/portal.css' %}">
+<style>
+    @page{
+        size: "A4";
+        margin: 2.5cm 1.5cm 3.5cm 1.5cm;
+    @top-center{
+        content: "MSUAS Examination TimeTable";
+        }
+    }
+    
+</style>
+</head> 
+
+<body class="app">   	
+    <div class="app-wrapper">
+	   
+	   
+        <footer class="app-footer">
+        <div class="container text-center py-3">  
+            <small class="copyright">Developed by S.Fukuzeya <i class="fas fa-heart" style="color: #fb866a;"></i> @msuas 2022 Dessertation</small>
+		       
+		</div>
+        </footer><!--//app-footer-->
+	    
+    </div><!--//app-wrapper-->    					
+
+ 
+    <!-- Javascript -->          
+    <script src="{% static 'assets/plugins/popper.min.js' %}"></script>
+    <script src="{% static 'assets/plugins/bootstrap/js/bootstrap.min.js' %}"></script>  
+    <!-- Page Specific JS -->
+    <script src="{% static 'assets/js/app.js' %}"></script> 
+
+</body>
+</html> 
+

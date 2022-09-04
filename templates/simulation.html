@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>MSUAS|Exam Scheduling|Processing...</title>
+      <link rel="stylesheet" href="{% static 'style3.css' %}">
+   </head>
+   <body>
+      <div class="container" style="background-image: url(../static/Capture.PNG);">
+         <div class="wrapper">
+            <div class="loader">
+               <div class="dot"></div>
+            </div>
+            <div class="loader">
+               <div class="dot"></div>
+            </div>
+            <div class="loader">
+               <div class="dot"></div>
+            </div>
+            <div class="loader">
+               <div class="dot"></div>
+            </div>
+            <div class="loader">
+               <div class="dot"></div>
+            </div>
+            <div class="loader">
+               <div class="dot"></div>
+            </div>
+         </div>
+         <div class="text">
+           <a id="schedule" href="{% url 'scheduling:get_timetable' %}" style="text-decoration:none ; color: aliceblue; font-weight: bolder;"> Scheduling Started please wait...</a>
+
+         </div>
+      </div>
+   </body>
+   <script src="{% static 'jquery-3.6.0.min.js' %}" ></script>
+   <script type='text/javascript'>
+       $(document).ready(function(){
+               $.ajax({
+                   type: "GET",
+                   cache: false,
+                   url: "/scheduling/status/",
+                   dataType: "json",
+                   success: function(data) {
+                       var msg = $('#schedule').text('Scheduling Started please wait...')
+                       $('#schedule').append(msg)
+                       var i = 0;
+                       var threadInterval = setInterval(function(){
+
+                           checkTask("/scheduling/status/", function(check){
+                               if(check.id){
+                                   msg.text('Algorithm done scheduling. View Timetable')
+                                   
+                                   pageRedirect();
+                                   
+                                //    window.location.href("/scheduling/view/timetable/")
+
+                                 //   redirect("/scheduling/view/timetable/")
+                                   window.clearInterval(threadInterval)
+                               }
+                               if(++i === 30){
+                                   msg.text('Its taking longer than expected...please keep waiting.')
+                                   window.clearInterval(threadInterval)
+                               }
+                           })
+                       },1000)
+                   }
+               })
+           
+
+           function checkTask(url,cb){
+               $.ajax({
+                   type: "GET",
+                   cache: false,
+                   url: url,
+                   dataType: "json",
+                   success: function(data) {
+                       cb(data)
+                   }
+               })
+           }
+           function redirect(url){
+               $.ajax({
+                   type: "GET",
+                   cache: false,
+                   url: url,
+                   dataType: "json",
+                   success: function(data) {
+                       cb(data)
+                   }
+               })
+           }
+         })
+         function pageRedirect() {
+      window.location.href = "/scheduling/view/timetable/";
+    } 
+         
+   </script>
+</html>

@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>MSUAS | Authentication Code</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="MSUAS EXAMINATION SYSTEM">
+    <meta name="author" content="SAMSON FUKUZEYA">    
+    <link rel="shortcut icon" href="favicon.ico"> 
+    
+    <!-- FontAwesome JS-->
+    <script defer src="{% static 'assets/plugins/fontawesome/js/all.min.js' %}"></script>
+    
+    <!-- App CSS -->  
+    <link id="theme-style" rel="stylesheet" href="{% static 'assets/css/portal.css' %}">
+
+</head> 
+
+<body class="app app-reset-password p-0">    	
+    <div class="row g-0 app-auth-wrapper">
+	    <div class="col-12 col-md-12 col-lg-12 auth-main-col text-center p-5">
+		    <div class="d-flex flex-column align-content-end">
+			    <div class="app-auth-body mx-auto">	
+				    <div class="app-auth-branding mb-4"><a class="app-logo" href="/"><img class="logo-icon me-2" src="{% static 'logo-icon.png' %}" alt="logo"></a></div>
+					<h2 class="auth-heading text-center mb-4">Two Factor Authentication Code</h2>
+
+					<div class="auth-intro mb-4 text-center">Enter the code sent to your phone number.</div>
+	
+					<div class="auth-form-container text-left">
+						{% if messages %}
+						{% for message in messages %}
+						{% if message.tags == 'error' %}
+						<div class="alert alert-danger" style="margin-top:10px">{{ message }}</div>
+						{% endif %}
+						{% if message.tags == 'success' %}
+						<div class="alert alert-success" style="margin-top:10px">{{ message }}</div>
+						{% endif %}
+						{% endfor %}
+						{% endif %}
+						<form class="auth-form resetpass-form" method="post"> {% csrf_token %}
+							<div class="email mb-3">
+								<label class="sr-only" for="reg-email">Authentication Code</label>
+								{{form.code}}
+							</div><!--//form-group-->
+							<div class="text-center">
+								<button type="submit" class="btn app-btn-primary btn-block theme-btn mx-auto">Verify Code</button>
+							</div>
+						</form>
+						
+						<div class="auth-option text-center pt-5"><a class="app-link" href="{% url 'accounts:login' %}" >Log in</a> <span class="px-2">|</span> <a class="app-link" href="{% url 'accounts:register_account' %}" >Sign up</a></div>
+					</div><!--//auth-form-container-->
+
+
+			    </div><!--//auth-body-->
+		    
+			    <footer class="app-auth-footer">
+				    <div class="container text-center py-3">
+				         <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+			        <small class="copyright">Developed by Samson Fukuzeya <i class="fas fa-heart" style="color: #fb866a;"></i> @msuas 2022 Projects </small>
+				       
+				    </div>
+			    </footer><!--//app-auth-footer-->	
+		    </div><!--//flex-column-->   
+	    </div><!--//auth-main-col-->
+
+    </div><!--//row-->
+
+
+</body>
+</html> 
+

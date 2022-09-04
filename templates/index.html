@@ -1,0 +1,290 @@
+<!doctype html>{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home | MSUAS | Examination Timetable</title>
+    <link rel="shortcut icon" href="{% static 'assets/images/fav.png' %}" type="image/x-icon">
+    <link href="{% static 'https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap' %} " rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'home/assets/images/fav-icon.png' %}">
+    <link rel="stylesheet" href="{% static 'home/assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'home/assets/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'home/assets/css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'home/assets/css/responsive.css' %}" />
+</head>
+
+<body style="background-color: rgb(176, 180, 198);">
+    <!-- ===============================*****Start Header*****=============================== -->
+    <header>
+        <div class="top-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-12">
+                        <div class="logo">
+                            <h1>MSUAS</h1>
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-12">
+                        <div class="top-sec-main">
+                           <div class="top-sec">
+                                <ol>
+                                    <li>
+                                        <i class="far fa-clock"></i>
+                                        <span>Open on mon-fri</span>8:00-16:45
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-headphones"></i>
+                                        <span>call for consultation</span>077 808 1286
+                                    </li>
+                                </ol>
+                            </div>
+                            <div class="top-sec-2">
+                                <ol>
+                                    <li><i class="fab fa-facebook-square"></i></li>
+                                    <li><i class="fab fa-twitter"></i></li>
+                                    <li class="last"><i class="fas fa-search"></i></li>
+                                </ol>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="_main_nav" style="background-color: rgb(209, 47, 42);">
+            <div class="container">
+                <div class="row">
+                    <div class="nav">
+                        <div class="logo-01">
+                            <h1>MSUAS</h1>
+                        </div>
+                        <div class="menu-toggle"></div>
+                        <div class="my-nav">
+                            <div class="menu">
+                              <ul>
+                                <li><a href="/">Home</a></li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">Notice</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                                <!-- <li class="link-01"><a href="{% url 'admin:index' %}">Staff Login</a></li> -->
+                              </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ===============================*****End Header*****=============================== -->
+
+    <!-- ===============================*****Start Slider*****=============================== -->
+
+    <section class="slider" style="background-color: rgb(103, 103, 218);">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="slider-content-main">
+                        <ol>
+                            <li><img src="{% static 'home/assets/images/zimbabwe-flag-round.gif' %}"></li>
+                        </ol>
+                        <h2>MANICALAND STATE UNIVERSITY OF APPLIED SCIENCES</h2>
+                        <h2 style="text-align:center">Examination Timetable</h2>
+                        <p>Examination Timetable<span>-</span>Exam Timetable queries<span>-</span></p>
+                        <div class="btn-01">
+                            <a href="{% url 'accounts:student_login' %}">Student Portal</a>
+                            <a href="{% url 'accounts:login' %}">Staff Portal</a>
+                            <a href="{% url 'accounts:hod_login' %}">H.O.D Portal</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-02">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="headding-01">
+                        <!-- <i class="fas fa-landmark"></i> -->
+                        <h2>Exam Department Staff Members</h2>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="border-radius: 2%;">
+                <div class="big-client" style="border-radius: 2%;">
+                    <div class="client" style="border-radius: 2%;">
+                        <img src="{% static 'home/assets1/img/default.png' %}">
+                    </div>
+                    <div class="client-content">
+                        <h2>Miss Japu</h2>
+                        <p>Administator</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="big-client">
+                    <div class="client">
+                        <img src="{% static 'home/assets1/img/default.png' %}">
+                    </div>
+                    <div class="client-content">
+                        <h2>Ms Cleo</h2>
+                        <p>Administator</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="big-client">
+                    <div class="client">
+                        <img src="{% static 'home/assets1/img/default.png' %}">
+                    </div>
+                    <div class="client-content">
+                        <h2>S Fukuzeya</h2>
+                        <p>Staff</p>
+                    </div>
+                </div>
+            </div>            
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="bg-03">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="box-01">
+                        <ol>
+                            <li><i class="fas fa-laptop"></i><span>Asset Registration</span>We register laptops,mouse, printers,keyboards,monitors...</li>
+                            <li><i class="fab fa-critical-role"></i><span>Inventory Management</span>We manage information about collage computers and printers.</li>
+                           
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="box-01">
+                        <ol>
+                            <li><i class="fas fa-cog"></i><span>Maintenance</span>We fix and repair staff and students laptop</li>
+                            <li><i class="fas fa-network-wired"></i><span>Network Troubleshooting</span>We troubleshoot Wi-fi connection issues.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="box-01">
+                        <ol>
+                            <li><i class="fas fa-wifi-2"></i><span>Wi-Fi Accounts</span>We create wi-fi accounts for students.</li>
+                            <li><i class="fab fa-laptop"></i><span>Help Desk</span>We respond to phone call quiries</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- <section class="bg-02-b">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-6">
+                    <div class="cal-box">
+                        <div class="cal-content">
+                            <i class="fas fa-laptop"></i>
+                            <h2>497</h2>
+                            <h3>Registered Laptops</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-6">
+                    <div class="cal-box">
+                        <div class="cal-content">
+                            <i class="fas fa-laptop"></i>
+                            <h2>2000</h2>
+                            <h3>Wi-Fi Accounts</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-6">
+                    <div class="cal-box">
+                        <div class="cal-content">
+                            <i class="fas fa-laptop"></i>
+                            <h2>120</h2>
+                            <h3>Desktop in Labs</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-6">
+                    <div class="cal-box">
+                        <div class="cal-content">
+                            <i class="fas fa-laptop"></i>
+                            <h2>15</h2>
+                            <h3>Available Printers</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                    <div class="footer-content">
+                        <p>Manicaland State University Of Applied Sciences | Exam Timetable</p>
+                        <ol>
+                            <li><i class="fab fa-facebook-square"></i></li>
+                            <li><i class="fab fa-pinterest"></i></li>
+                            <li><i class="fab fa-instagram"></i></li>
+                            <li><i class="fab fa-twitter"></i></li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                    
+                     
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                    
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                    
+                </div>
+                <div class="col-lg-8 col-md-8 col-12">
+                    
+                </div>
+                <div class="col-lg-4 col-md-4 col-12">
+                    <div class="end-items-01">
+                        <ul>
+                            <li><span>copyright@2022</span>Samson Fukuzeya.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script src="{% static 'home/assets/js/jquery-3.2.1.min.js' %}"></script>
+<script src="{% static 'home/assets/js/popper.min.js' %}"></script>
+<script src="{% static 'home/assets/js/bootstrap.min.js' %}"></script>
+<script>
+      $(document).ready (function(){
+        $('.menu-toggle').click(function(){
+          $('.menu-toggle').toggleClass('active')
+          $('.menu').toggleClass('active')
+        })
+      })
+</script>
+</html>

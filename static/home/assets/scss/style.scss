@@ -1,0 +1,24 @@
+
+
+@import 'variable';
+
+/* ================================ Basic CSS =============================== */
+
+@import 'base/basic_setup';
+
+/* ================================ Header CSS =============================== */
+
+@import 'component/home/header';
+
+/* ================================ Slider CSS =============================== */
+
+@import 'component/home/slider';
+
+/* ================================ Section CSS =============================== */
+
+@import 'component/home/section';
+
+
+/* ================================ Footer CSS =============================== */
+
+@import 'component/footer';
